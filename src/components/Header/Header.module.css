@@ -1,0 +1,41 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 10%;
+}
+
+.header h2 {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.header img {
+  width: 8rem;
+  height: 8rem;
+  object-fit: contain;
+  border-radius: 50%;
+  border: 2px solid #ffc404;
+  margin-bottom: 1rem;
+}
+.titleContainer {
+  display: flex;
+  align-items: center; /* Align title and cart icon vertically */
+  gap: 1rem; /* Add space between the title and cart icon */
+}
+.cartButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.cartButton img {
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: contain;
+}

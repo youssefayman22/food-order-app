@@ -1,0 +1,101 @@
+.cartOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.cart {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.cartItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.cartImage {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+.title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-right: 0.5rem;
+  color: black;
+}
+
+.price {
+  font-size: 1rem;
+  color: #555;
+}
+
+.closeButton {
+  background-color: #ff4040;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.closeButton:hover {
+  background-color: #e03030;
+}
+
+.total {
+  margin-top: 1rem;
+  text-align: right;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+.deleteButton {
+  background-color: #ff4040;
+  color: #fff;
+  border: none;
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  align-self: flex-end;
+}
+
+.deleteButton:hover {
+  background-color: #e03030;
+}
+
+
+.proceedButton {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.proceedButton:hover {
+  background-color: #218838;
+}

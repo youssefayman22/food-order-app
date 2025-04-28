@@ -1,0 +1,11 @@
+.foodList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    margin: 2rem;
+    background: linear-gradient(#29251c, #2c2306);
+    border: 2px solid #000000;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgb(0, 0, 0);
+  }
