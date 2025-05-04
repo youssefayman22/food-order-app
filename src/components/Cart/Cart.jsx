@@ -1,24 +1,15 @@
 import { useContext, useState } from "react";
 import CartContext from "../../store/CartContext";
 import styles from "./Cart.module.css";
-import { fetchFoodData } from "../../utils";
-import { useFetchFoodData } from "../../hooks/useFetchFoodData";
 import UserForm from "../UserForm/UserForm";
 
 const Cart = ({ onClose }) => {
   const { cart, handleRemoveFromCart } = useContext(CartContext);
-  const { isFetching, error } = useFetchFoodData(fetchFoodData, []);
   const [isProceed, setIsCProceed] = useState(false);
   const handleProceed = () => {
     const cartState = isProceed;
     setIsCProceed(!cartState);
   };
-  if (isFetching) {
-    return <p>Loading...</p>;
-  }
-  if (error) {
-    return <p>{error.message || "Error Fetching Food Items"}</p>;
-  }
 
   const totalPrice = cart
     .reduce((total, item) => total + item.price, 0)
@@ -33,7 +24,7 @@ const Cart = ({ onClose }) => {
         ) : (
           <>
             <ul>
-              {cart.map((item) => {
+              {cart.find((item) => {
                 let price = item.price.toFixed(2);
                 return (
                   <li key={item.id} className={styles.cartItem}>
@@ -64,7 +55,7 @@ const Cart = ({ onClose }) => {
           <button className={styles.proceedButton} onClick={handleProceed}>Proceed</button>
         )}
       </div>
-      {isProceed && <UserForm onClose={handleProceed} onSubmit={handleProceed} />}
+      {isProceed && <UserForm onCancel={handleProceed} onSubmit={handleProceed} totalPrice = {totalPrice} />}
     </div>
   );
 };

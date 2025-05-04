@@ -21,6 +21,10 @@
     max-width: 400px;
   }
   
+  .form h2 {
+    text-align: center;
+    color: #000000;
+  }
   .formGroup {
     margin-bottom: 1rem;
   }
@@ -43,6 +47,24 @@
     justify-content: space-between;
   }
   
+  .checkout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    margin: -0.5rem 0 -0.5rem;
+  }
+
+  .invalid {
+    border: 1px solid red; 
+    background-color: #ffe6e6; 
+  }
+  
+  .errorMessage {
+    color: red;
+    font-size: 0.8rem;
+    margin: 0.5rem 0 0.2rem;
+  }
   .cancelButton {
     background-color: #ff4040;
     color: #fff;

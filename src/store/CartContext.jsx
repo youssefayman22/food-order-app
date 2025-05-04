@@ -19,7 +19,7 @@ export const CartProvider = ({ children }) => {
   };
 
   return (
-    <CartContext
+    <CartContext.Provider
       value={{
         cart: cart,
         handleAddToCart,
@@ -27,7 +27,7 @@ export const CartProvider = ({ children }) => {
       }}
     >
       {children}
-    </CartContext>
+    </CartContext.Provider>
   );
 };
 
